@@ -17,7 +17,11 @@ module.exports = {
         url: url,
         type:"POST",
         data:data,
-        success:success,
+        success: function(data) {
+          console.log("success in reaching");
+          console.log("data: " + data);
+          window.location="/initialpage";
+        },
         error:error
       })
     })

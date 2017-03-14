@@ -82,7 +82,7 @@ module.exports = React.createClass({
                     <div className="form-group">
                       <input type="password" className="form-control" placeholder="Password" value={this.state.password} onChange={this.handlePassword}></input>
                     </div>
-                    
+
                     <div className="form-group">
                       <br></br>
                       <input type="submit" className="loginBtn" value="Login">

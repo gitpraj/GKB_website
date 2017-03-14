@@ -33,7 +33,7 @@ gulp.task('bundle', function() {
 
  gulp.task('serve', ['default', 'bundle', 'live-server'], function() {
    browserSync.init(null, {
-     proxy:"http://localhost:3333",
-     port: 9004
+     proxy:"http://localhost:7777",
+     port: 9001
    })
  })

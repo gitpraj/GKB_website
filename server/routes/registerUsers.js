@@ -39,8 +39,8 @@ module.exports = function(app) {
 
 
   })
-  
-  
+
+
   app.route('/api/login')
   .get(function(req,res){
       res.send("login page");
@@ -57,6 +57,9 @@ module.exports = function(app) {
               console.log(err);
           }else if (!data) {
               console.log("incorrect details");
+              //res.send("sdlghsdlgnsfgnsfglnsrgi");
+              console.log("after render");
+              //res.status(400).send();
           }else{
               console.log("Successfully Logged in");
               res.status(200).send();

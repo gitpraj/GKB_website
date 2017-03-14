@@ -31,7 +31,7 @@ app.get('/login', function(req, res) {
 // })
 .use(express.static(__dirname + '/../.tmp'))
 //.use(express.static(__dirname + '/../app/components'))
-.listen(3333);
+.listen(7777);
 
 app.use(parser.json());
 app.use(parser.urlencoded({extended: false}));
