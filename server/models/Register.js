@@ -10,6 +10,11 @@ var RegisterSchema = new mongoose.Schema({
   password: String
 });
 
+
+RegisterSchema.methods.verifyPassword = function(password) {
+    return (password == this.password);
+}
+
 var Register = mongoose.model("Register", RegisterSchema, 'registers');
 
 module.exports = Register;

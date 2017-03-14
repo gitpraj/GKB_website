@@ -24,3 +24,7 @@
 .loginBtn {
   float: right;
 }
+
+a.hover:hover {
+    text-decoration: underline;
+}

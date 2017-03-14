@@ -6,5 +6,12 @@ module.exports = {
             payload: user,
             type: "register-user"
         })
-    }
+    },   
+    
+    login: function(user) {
+    dispatcher.dispatch({
+        payload: user,
+        type:"login-user"
+    })
+}
 }

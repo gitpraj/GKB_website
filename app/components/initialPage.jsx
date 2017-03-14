@@ -26,10 +26,16 @@ module.exports = React.createClass({
     return (
         <div>
 
-                <form>
+                <form className="welcome">
+                    <h1>Welcome</h1>
                     <div className="form-group">
-                      <input type="submit" className="loginBtn" value="SignUp" onClick={this.SignUpBtnClicked}>
+                      <input type="submit" className="loginBtn" value="Sign Up" onClick={this.SignUpBtnClicked}>
                       </input>
+                    </div>
+                </form>
+            
+                <form className="login">
+                    <div>
                       <input type="submit" className="loginBtn" value="Login" onClick={this.LoginBtnClicked}>
                       </input>
                     </div>

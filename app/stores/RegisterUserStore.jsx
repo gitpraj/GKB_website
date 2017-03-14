@@ -22,6 +22,12 @@ function RegisterUserStore() {
       console.log("Wer are herereere");
       helper.post("api/registerUsers", user)
     }
+    
+    function  loginUser(user) {
+        triggerListeners();
+        console.log("Directing login");
+        helper.post("api/login", user)
+    }
 
     function onChange(listener) {
       listeners.push(listener);
@@ -38,7 +44,12 @@ function RegisterUserStore() {
       if (type == 'register-user') {
           addRegisterUser(event.payload);
       }
+        
+      if(type == 'login-user'){
+          loginUser(event.payload);
+      }
     })
+    
 
     return {
       getUser: getUser,

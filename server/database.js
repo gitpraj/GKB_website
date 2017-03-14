@@ -6,14 +6,14 @@ var tunnel = require('tunnel-ssh');
 // var url_temp = 'mongodb://ubuntu@115.146.90.170'
 // var url_local_uri = 'mongodb://localhost:27017/?3t.uriVersion=2&3t.connectionMode=direct&readPreference=primary/mydb'
 // var url_local = 'mongodb://localhost/mydb'
-// mongoose.connect(url_temp, function(err) {
+// mongoose.connect(url_local, function(err) {
 //   if (err) {
 //     console.log("database not conencted");
 //   } else {
 //     console.log("");
 //     console.log("database connected");
 //   }
-//
+
 //   // let temp = {
 //   //   firstname: "Prajith",
 //   //   email: "prajith.manian@gmail.com",
@@ -34,7 +34,7 @@ var config = {
     username:"ubuntu",
     host:"115.146.90.170",
     agent : process.env.SSH_AUTH_SOCK,
-    privateKey:require('fs').readFileSync('C:/Users/prajith/publicKey'),
+    privateKey:require('fs').readFileSync('/Users/zhangruoq/pb'),
     port:22,
     dstPort:27017,
 };

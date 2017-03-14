@@ -27,6 +27,14 @@ module.exports = React.createClass({
   handlePassword: function(e) {
     this.setState({password: e.target.value});
   },
+
+    loginUser: function(e){
+        e.preventDefault();
+        action.login({
+            email: this.state.email,
+            password: this.state.password
+        })
+    },
   // addUser: function(e) {
   //   e.preventDefault();
   //   console.log("adding/register user: ", this.state.firstname);
@@ -54,20 +62,27 @@ module.exports = React.createClass({
   render: function(){
     return (
         <div>
+                <form className="welcome">
+                    <h1>Welcome</h1>
+                    <div>
+                        <input type="submit" className="signUpBtn" value="Sign Up">
+                        </input>
+                    </div>
+                </form>
 
-                <form onSubmit={this.authenticate}>
+                <form className="login" onSubmit={this.loginUser}>
                     <h1>
                       Login
                     </h1>
 
                     <div className="form-group">
-                      <input type="text" className="form-control" placeholder="Email" value={this.state.email} onChange={this.handleFirstName}></input>
+                      <input type="text" className="form-control" placeholder="Email" value={this.state.email} onChange={this.handleEmail}></input>
                     </div>
 
                     <div className="form-group">
                       <input type="password" className="form-control" placeholder="Password" value={this.state.password} onChange={this.handlePassword}></input>
                     </div>
-
+                    
                     <div className="form-group">
                       <br></br>
                       <input type="submit" className="loginBtn" value="Login">

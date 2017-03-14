@@ -39,4 +39,28 @@ module.exports = function(app) {
 
 
   })
+  
+  
+  app.route('/api/login')
+  .get(function(req,res){
+      res.send("login page");
+  })
+  .post(function(req,res){
+      console.log("Logging in");
+      var user = {
+          email: req.body.email,
+          password: req.body.password
+      };
+      console.log(user.email + "," + user.password);
+      RegisterUser.findOne(user, function(err,data){
+          if(err){
+              console.log(err);
+          }else if (!data) {
+              console.log("incorrect details");
+          }else{
+              console.log("Successfully Logged in");
+              res.status(200).send();
+          }
+      })
+  })
 }
