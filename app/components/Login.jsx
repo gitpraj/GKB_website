@@ -70,7 +70,7 @@ module.exports = React.createClass({
                     </div>
                 </form>
 
-                <form className="login" onSubmit={this.loginUser}>
+                <form className="login" onSubmit={this.loginUser} method="post" action="/login">
                     <h1>
                       Login
                     </h1>

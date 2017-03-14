@@ -17,8 +17,19 @@ module.exports = {
         url: url,
         type:"POST",
         data:data,
-        success:success,
+        success: function(response){
+            console.log("Reached responses");
+            console.log("This is the response "+ JSON.stringify(response));
+            if(response=="Fail"){
+                window.location = '/login';
+            }else{
+                console.log("This is the response "+ JSON.stringify(response.email));
+                window.location = '/initialpage';
+}
+            
+        },
         error:error
+          
       })
     })
   }
