@@ -11,7 +11,7 @@ var browserHistory = require('react-router').browserHistory;
 //var schema = require('./../../server/database.js');
 
 module.exports = React.createClass({
-  getInitialState:function() {
+  getInitialState:function(){
     return {email:"", password:""};
   },
   SignUpBtnClicked: function(e) {
@@ -28,6 +28,7 @@ module.exports = React.createClass({
 
                 <form className="welcome">
                     <h1>Welcome</h1>
+                    <h2>{this.props.params.id}</h2>
                     <div className="form-group">
                       <input type="submit" className="loginBtn" value="Sign Up" onClick={this.SignUpBtnClicked}>
                       </input>
@@ -35,6 +36,7 @@ module.exports = React.createClass({
                 </form>
             
                 <form className="login">
+                    <h1>LOGIN</h1>
                     <div>
                       <input type="submit" className="loginBtn" value="Login" onClick={this.LoginBtnClicked}>
                       </input>

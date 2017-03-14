@@ -13,6 +13,16 @@ app.get('/initialPage', function(req, res) {
   res.render('./../app/index.ejs', {});
 })
 
+
+app.get('/initialPage/:name', function(req, res) {
+    
+    var name = req.params.name;
+    res.render('./../app/index.ejs', {name:name});
+//    //res.send(name);
+//    //res.redirect('/initialpage',name);
+//    res.render('./../app/index.ejs', {});
+})
+
 app.get('/signup', function(req, res) {
   res.render('./../app/index.ejs', {});
 })

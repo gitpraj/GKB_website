@@ -28,3 +28,17 @@
 a.hover:hover {
     text-decoration: underline;
 }
+
+.welcome {
+    float:left;
+    background-color: darkblue;
+    width:500px;
+    height:500px;
+}
+
+.login {
+    float:left;
+    background-color: skyblue;
+    width:500px;
+    height:500px;
+}
