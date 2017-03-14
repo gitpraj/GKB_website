@@ -17,12 +17,17 @@ module.exports = {
         url: url,
         type:"POST",
         data:data,
-        success: function(data) {
-          console.log("success in reaching");
-          console.log("data: " + data);
-          window.location="/initialpage";
+        success: function(response){
+            console.log("Reached responses");
+            console.log("This is the response "+ JSON.stringify(response));
+            if(response=="Fail"){
+                window.location = '/login';
+            }else{
+                console.log("This is the response "+ JSON.stringify(response.email));
+                window.location = '/initialpage';
         },
         error:error
+
       })
     })
   }

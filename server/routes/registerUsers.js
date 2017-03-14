@@ -51,18 +51,19 @@ module.exports = function(app) {
           email: req.body.email,
           password: req.body.password
       };
+
       console.log(user.email + "," + user.password);
       RegisterUser.findOne(user, function(err,data){
           if(err){
               console.log(err);
           }else if (!data) {
               console.log("incorrect details");
-              //res.send("sdlghsdlgnsfgnsfglnsrgi");
-              console.log("after render");
-              //res.status(400).send();
+              //Direct to login
+              res.send("Fail");
           }else{
               console.log("Successfully Logged in");
-              res.status(200).send();
+              //Direct to homepage
+              res.json({email: user.email});
           }
       })
   })
