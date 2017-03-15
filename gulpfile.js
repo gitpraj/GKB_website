@@ -6,10 +6,17 @@ var source = require('vinyl-source-stream');
 var reactify = require('reactify');
 var importCss = require('gulp-import-css');
 var browserifycss = require('browserify-css');
+var image = require('gulp-image');
 
 gulp.task('default', function () {
   gulp.src('app/components/styles.css')
     .pipe(importCss())
+    .pipe(gulp.dest('./.tmp'));
+});
+
+gulp.task('image', function () {
+  gulp.src('app/components/img/*')
+    .pipe(image())
     .pipe(gulp.dest('./.tmp'));
 });
 
@@ -31,7 +38,7 @@ gulp.task('bundle', function() {
   .pipe(gulp.dest('./.tmp'));
 })
 
- gulp.task('serve', ['default', 'bundle', 'live-server'], function() {
+ gulp.task('serve', ['default', 'image', 'bundle', 'live-server'], function() {
    browserSync.init(null, {
      proxy:"http://localhost:7777",
      port: 9001

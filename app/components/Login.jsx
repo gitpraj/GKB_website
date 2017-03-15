@@ -14,51 +14,19 @@ module.exports = React.createClass({
   getInitialState:function() {
     return {email:"", password:""};
   },
-  // constructor: function() {
-  //   this.state = { firstname: "" };
-  //   this.onChange = this.onChange.bind(this)
-  // },
-  // handleFirstName: function(e) {
-  //   this.setState({firstname: e.target.value});
-  // },
   handleEmail: function(e) {
     this.setState({email: e.target.value});
   },
   handlePassword: function(e) {
     this.setState({password: e.target.value});
   },
-
-    loginUser: function(e){
-        e.preventDefault();
-        action.login({
-            email: this.state.email,
-            password: this.state.password
-        })
-    },
-  // addUser: function(e) {
-  //   e.preventDefault();
-  //   console.log("adding/register user: ", this.state.firstname);
-  //   action.add({
-  //     name: this.state.firstname,
-  //     email: this.state.email,
-  //     password: this.state.password
-  //   })
-    //browserHistory.push('/login');
-    // let temp = {
-    //   firstname: this.state.firstname,
-    //   email: "prajith.manian@gmail.com",
-    //   password: "abcdefgh"
-    // };
-    // schema.create(temp, (err, data) => {
-    //                 //callback(null, data);
-    //                 if (err) {
-    //                   console.log("error while saving");
-    //                 } else {
-    //                   console.log("done saving");
-    //                 }
-    // });
-
-  //},
+  loginUser: function(e){
+      e.preventDefault();
+      action.login({
+          email: this.state.email,
+          password: this.state.password
+      })
+  },
   render: function(){
     return (
         <div>

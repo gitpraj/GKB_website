@@ -7,20 +7,21 @@ var Router = require('react-router').Router;
 var Route = require('react-router').Route;
 var Link = require('react-router').Link;
 var browserHistory = require('react-router').browserHistory;
+var Image = require('react-image');
 
-console.log(this.props);
+//console.log(this.props);
 
 module.exports = React.createClass ({
     onClickButton: function(){
-        alert("AAAAAAA");
+        alert("Help");
     },
     render: function() {
         return(
             <div>
                 <h2>Hi! {this.props.params.id}</h2>
                 <input className="searchbox" type = "text" placeholder ="Enter address, keywords..."></input>
-                <input type="image" className="submitimg" src="img/search-icon.png" width="40" height="40"></input>
-                <button type="submit" className ="helpbutton" onClick={this.onClickButton}>Help<img src ="img/help-icon.png" width="20px" height="20px" align="middle" className="helpimg"></img></button>
+                <input type="image" className="submitimg" src="/search-icon.png" width="40px" height="20px"></input>
+                <button type="submit" className ="helpbutton" onClick={this.onClickButton}>Help<img src ="/help-icon.png" width="20px" height="20px" className="helpimg"></img></button>
             </div>
         );
 }
