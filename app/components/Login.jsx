@@ -14,6 +14,10 @@ module.exports = React.createClass({
   getInitialState:function() {
     return {email:"", password:""};
   },
+  SignUpBtnClicked: function(e) {
+    console.log("Sign Up Button Clicked");
+    browserHistory.push('/signup');
+  },
   handleEmail: function(e) {
     this.setState({email: e.target.value});
   },
@@ -29,16 +33,22 @@ module.exports = React.createClass({
   },
   render: function(){
     return (
-        <div>
+        <div className="initial">
                 <form className="welcome">
                     <h1>Welcome</h1>
                     <div>
-                        <input type="submit" className="signUpBtn" value="Sign Up">
-                        </input>
+                    <br></br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                    <br></br>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div className="form-group">
+                      <input type="submit" className="signUpBtn" value="Sign Up" onClick={this.SignUpBtnClicked}>
+                      </input>
+                    </div>
                     </div>
                 </form>
 
-                <form className="login" onSubmit={this.loginUser} method="post" action="/login">
+                <form className="login" onSubmit={this.loginUser}>
                     <h1>
                       Login
                     </h1>
@@ -49,6 +59,10 @@ module.exports = React.createClass({
 
                     <div className="form-group">
                       <input type="password" className="form-control" placeholder="Password" value={this.state.password} onChange={this.handlePassword}></input>
+                    </div>
+
+                    <div className="form-group">
+                            <a className="forgotPwdBtn">Forgot Password?</a>
                     </div>
 
                     <div className="form-group">

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="build/react-0.14.0.js"></script>
+		<script src="build/react-dom-0.14.0.js"></script>
+		<script src="build/JSXTransformer.js"></script>
+		<link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div id="container"></div>
+        <script type = "text/jsx">
+            var Welcome = React.createClass({
+                render: function() {
+                    return (
+                        <div>
+                            <form id="welcomeform">
+                                <h1>Welcome</h1>
+                                <p>aaaaaaafmsl bdalslffsnkbndalk</p>
+                                <button>Sign Up</button>
+                            </form>
+                        </div>
+                    )
+                }
+            });
+
+            ReactDOM.render(
+                <Welcome />,document.getElementById('container')
+            );
+        </script>
+    </body>
+</html>

@@ -23,7 +23,7 @@ function RegisterUserStore() {
       helper.post("api/registerUsers", user)
     }
     
-    function  loginUser(user) {
+    function loginUser(user) {
         triggerListeners();
         console.log("Directing login");
         helper.post("api/login", user)
