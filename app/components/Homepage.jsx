@@ -14,10 +14,15 @@ module.exports = React.createClass ({
     onClickButton: function(){
         alert("AAAAAAA");
     },
+    logoutClicked : function(){
+        console.log("User logging out");
+        browserHistory.push('/login');
+    },
     render: function() {
         return(
             <div>
-                <h2>Hi! {this.props.params.id}</h2>
+                <h2>Hi!</h2>
+                <div className ="userinfo"> {this.props.params.id}<br></br><span className="logoutBtn" onClick={this.logoutClicked}>logout</span></div>
                 <input className="searchbox" type = "text" placeholder ="Enter address, keywords..."></input>
                 <input type="image" className="submitimg" src="img/search-icon.png" width="40" height="40"></input>
                 <button type="submit" className ="helpbutton" onClick={this.onClickButton}>Help<img src ="img/help-icon.png" width="20px" height="20px" align="middle" className="helpimg"></img></button>

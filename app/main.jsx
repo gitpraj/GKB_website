@@ -10,7 +10,7 @@ var browserHistory = require('react-router').browserHistory;
 
 var SignUp = require('./components/SignUp.jsx')
 var LogIn = require('./components/Login.jsx')
-var InitialPage = require('./components/initialPage.jsx');
+//var InitialPage = require('./components/initialPage.jsx');
 var Homepage = require('./components/Homepage.jsx');
 
 var registerUserStore = require('./stores/RegisterUserStore.jsx');
@@ -27,8 +27,8 @@ var registerUserStore = require('./stores/RegisterUserStore.jsx');
 ReactDOM.render((
    <Router history = {browserHistory}>
       <Route path = "/">
-         <Route path = "initialPage" component = {InitialPage} />
-         <Route path = "initialPage/:id" component = {Homepage} />
+         <Route path = "initialPage" component = {LogIn} />
+         <Route path = "initialpage/:id" component = {Homepage} />
          <Route path = "signup" component = {SignUp} />
          <Route path = "login" component = {LogIn} />
       </Route>

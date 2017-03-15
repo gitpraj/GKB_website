@@ -1,18 +1,16 @@
+/*
 .signUpBtn {
-	background-color:#44c767;
-	-moz-border-radius:28px;
-	-webkit-border-radius:28px;
-	border-radius:28px;
-	border:1px solid #18ab29;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
+    position: absolute;
+    left:80px;
+    top:500px;
+    width: 272px;
+    height: 49.9px;
+    border: solid 1px white;
+    background-color: #1b2242;
+    color:white;
+    font-size: 20px;
 }
+
 .signUpBtn:hover {
 	background-color:#5cbf2a;
 }
@@ -20,9 +18,42 @@
 	position:relative;
 	top:1px;
 }
+*/
+
+.searchbox {
+    border: solid 1px;
+    border-color: darkgrey;
+	margin-left: 20px;
+	margin-top: 80px;
+	height:35px;
+	width: 360px;
+}
+
+.signUpBtn {
+	background-color:#1b2242;
+	border:1px solid white;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.signUpBtn:hover {
+	background-color:skyblue;
+}
+.signUpBtn:active {
+	position:relative;
+	top:1px;
+}
 
 .loginBtn {
-  float: right;
+  width: 272px;
+    height: 49.9px;
+    border: solid 1px #dee1f3;
+    background-color: white;
+    font-size: 20px;
 }
 
 a.hover:hover {
@@ -31,14 +62,74 @@ a.hover:hover {
 
 .welcome {
     float:left;
-    background-color: darkblue;
-    width:500px;
-    height:500px;
+    width: 414px;
+    height: 780px;
+    background-color: #1b2242;
 }
 
 .login {
-    float:left;
-    background-color: skyblue;
-    width:500px;
-    height:500px;
+    float: right;
+    width: 497px;
+    height: 780px;
+    background-color: #ffffff;
+}
+
+#container {
+    width:1000px;
+    height: 780px;
+    background-color: white;
+}
+
+.login h1{
+    color:black;
+}
+
+.forgotPwdBtn {
+    float:right;
+}
+
+.forgotPwdBtn:hover {
+    text-decoration: underline;
+    color:cadetblue;
+}
+
+input {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 10px 20px 2px;
+  border: 0 solid #b7b7b7;
+  border-bottom-width: 1px;
+  font: normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(0,142,198,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+}
+
+.welcome h1{
+    color:white;
+}
+
+.welcome p {
+    width:380px;
+    text-align: center;
+    color:white;
+    position:inherit;
+    left:17px;
+}
+
+.logoutBtn {
+    font-size: 20px;
+}
+
+.logoutBtn:hover {
+    text-decoration: underline;
+    color:cadetblue;
+}
+
+.userinfo {
+    position:absolute;
+    top:100px;
+    right:100px;
 }
