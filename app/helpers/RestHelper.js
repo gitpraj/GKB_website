@@ -22,9 +22,10 @@ module.exports = {
             console.log("This is the response "+ JSON.stringify(response));
             if(response=="Fail"){
                 window.location = '/login';
-            }else{
-                console.log("This is the response "+ JSON.stringify(response.email));
-                window.location = "/initialpage/" + response.email;
+            } else{
+                var user = response.email;
+                console.log("This is the response "+ user);
+                window.location = '/initialpage/'+user;
             }
         },
         error:error
