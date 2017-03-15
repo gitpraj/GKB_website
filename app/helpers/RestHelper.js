@@ -24,7 +24,8 @@ module.exports = {
                 window.location = '/login';
             }else{
                 console.log("This is the response "+ JSON.stringify(response.email));
-                window.location = '/initialpage';
+                window.location = "/initialpage/" + response.email;
+            }
         },
         error:error
 

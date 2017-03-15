@@ -9,8 +9,13 @@ app.get('/', function(req, res) {
   res.send("WELCOME TO THE GKB PROJECT. IT IS GOING TO BE ONE HELL OF A READ");
 })
 
-app.get('/initialPage', function(req, res) {
+app.get('/initialpage', function(req, res) {
   res.render('./../app/index.ejs', {});
+})
+
+app.get('/initialpage/:name', function(req, res) {
+  res.render('./../app/index.ejs', {});
+  //res.send("Prajith wins");
 })
 
 app.get('/signup', function(req, res) {

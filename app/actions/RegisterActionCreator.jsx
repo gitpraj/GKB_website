@@ -12,6 +12,6 @@ module.exports = {
         dispatcher.dispatch({
             payload: user,
             type:"login-user"
-    })
-}
+        })
+    }
 }

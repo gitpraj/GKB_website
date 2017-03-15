@@ -26,7 +26,7 @@ var registerUserStore = require('./stores/RegisterUserStore.jsx');
 ReactDOM.render((
    <Router history = {browserHistory}>
       <Route path = "/">
-         <Route path = "initialPage" component = {InitialPage} />
+         <Route path = "initialpage" component = {InitialPage} />
          <Route path = "signup" component = {SignUp} />
          <Route path = "login" component = {LogIn} />
       </Route>
